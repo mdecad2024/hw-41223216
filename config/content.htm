@@ -534,8 +534,9 @@ openByGet();
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/lq3iXxYYYKQ?si=veLe_peJbPB4rAtm" title="YouTube video player" width="560"></iframe></p>
 <p></p>
 <script src="/static/jsc3d.js" type="text/javascript"></script>
-<div id="models"><canvas height="300" id="cv1" style="border: 1px solid;" width="400"></canvas> <canvas height="300" id="cv2" style="border: 1px solid;" width="400"></canvas> <!-- 可以添加更多的 canvas --></div>
-<div style="width: 400px; height: 70px; border: 1px solid;">Model Color:<input id="mdlClr" onchange="changeOption('ModelColor',this.value)" style="margin-right: 50px;" type="color" value="#00ff40"/> Back Color1:<input id="bckClr1" onchange="changeOption('BackgroundColor1',this.value)" style="margin-right: 50px;" type="color"/> Back Color2:<input class="custom-cursor-default-hover" id="bckClr2" onchange="changeOption('BackgroundColor2',this.value)" type="color"/><br/> Render Mode:<select id="render" onchange="changeOption('RenderMode',this.value)">
+<div id="models"><canvas height="300" id="cv1" style="border: 1px solid;" width="400"></canvas> <canvas height="300" id="cv2" style="border: 1px solid;" width="400"></canvas> <canvas height="300" id="cv3" style="border: 1px solid;" width="400"></canvas> <!-- 可以添加更多的 canvas --></div>
+<div></div>
+<div style="width: 400px; height: 70px; border: 1px solid;">Model Color:<input id="mdlClr" onchange="changeOption('ModelColor',this.value)" style="margin-right: 50px;" type="color" value="#00ff40"/> Back Color1:<input id="bckClr1" onchange="changeOption('BackgroundColor1',this.value)" style="margin-right: 50px;" type="color"/> Back Color2:<input id="bckClr2" onchange="changeOption('BackgroundColor2',this.value)" type="color"/><br/> Render Mode:<select id="render" onchange="changeOption('RenderMode',this.value)">
 <option>Flat</option>
 <option>Point</option>
 <option>Wireframe</option>
@@ -545,7 +546,6 @@ openByGet();
 <option>low</option>
 <option>high</option>
 </select></div>
-<p>
 <script type="text/javascript">
 var viewers = [];
 
@@ -595,8 +595,10 @@ function openByUrl(){
 
 function openByGet(){
     var urls = [
-       "https://41223216@s104.cycu.org/~41223216/W16-1.stl",     
-        "https://41223216@s104.cycu.org/~41223216/W16-2.stl"
+         "https://41223216@s104.cycu.org/~41223216/W16-1.stl",    
+         "https://41223216@s104.cycu.org/~41223216/W16-2.stl",     
+         "https://41223216@s104.cycu.org/~41223216/123.stl",     
+         
     ];
     var opt = getOptions();
     urls.forEach((url, index) => {
@@ -606,8 +608,7 @@ function openByGet(){
 }
 
 openByGet();
-</script>
-</p><h3>w16_exam2</h3>
+</script><h3>w16_exam2</h3>
 <p>NX 零件1 完成圖</p>
 <p><img alt="" height="314" src="/images/螢幕擷取畫面 2024-12-27 161546.png" width="500"/></p>
 <p><span>NX 零件1 操作影片</span></p>
